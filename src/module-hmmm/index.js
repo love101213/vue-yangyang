@@ -4,6 +4,7 @@ import routerMaps from './router'
 // vuex
 import app from './store/app'
 import article from './store/article'
+import subject from './store/subject'
 
 export default {
     install(module, store) {
@@ -13,5 +14,7 @@ export default {
         }
         store.registerModule('hmmm', app)
         store.registerModule('articles', article)
+        store.registerModule('subject', subject)
+
     }
 }

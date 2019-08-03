@@ -4,6 +4,9 @@ const app = {
         name: '',
         baseList: [],
         baseCount: 0,
+        restaurants: [],
+        state: '',
+        timeout: null
     },
     mutations: {
         SET_NAME: (state, name) => {

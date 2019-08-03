@@ -8,6 +8,16 @@
           <el-button type="info">批量导入</el-button>
          
         </el-row>
+        <el-row>
+          <el-col>
+            <!-- <el-autocomplete
+  v-model="state"
+  :fetch-suggestions="querySearchAsync"
+  placeholder="请输入内容"
+  @select="handleSelect"
+></el-autocomplete> -->
+          </el-col>
+        </el-row>
      
           <!-- 多选 -->
           <el-row :gutter="20" >

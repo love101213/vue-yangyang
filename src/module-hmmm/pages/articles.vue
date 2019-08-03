@@ -56,7 +56,9 @@
        <template slot-scope="scope">
         <el-button type="text">预览</el-button>
         <el-button type="text">修改</el-button>
-         <el-button type="text" @click="deleteItem(scope.id)">删除</el-button>
+         <el-button type="text" @click="deleteItem(scope.row.id)">
+         
+          删除</el-button>
           <el-button type="text">
                 {{scope.row.state == 1 ? '启用':'禁用'}}
           </el-button>
@@ -80,7 +82,7 @@
 </template>
 
 <script>
-import {mapState,mapMutations} from 'vuex'
+import {mapState,mapMutations,mapActions} from 'vuex'
 export default {
   name: 'ArticlesList',
   created () {
@@ -93,12 +95,15 @@ export default {
     return {}
   },
   methods: {
-    handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
-      },
-      handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
-      }
+    // ...mapActions([]),
+     ...mapMutations(['handleSizeChange','handleCurrentChange','deleteItem' ]),
+  
+    // handleSizeChange(val) {
+    //     console.log(`每页 ${val} 条`);
+    //   },
+    //   handleCurrentChange(val) {
+    //     console.log(`当前页: ${val}`);
+    //   }
   }
 }
 </script>
