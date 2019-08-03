@@ -1,3 +1,4 @@
+import { list as baseListQuestion } from '@/api/hmmm/questions.js'
 const app = {
     state: {
         name: '',
@@ -7,6 +8,15 @@ const app = {
     mutations: {
         SET_NAME: (state, name) => {
             state.name = name
+        },
+        updateList(state, option) {
+
+            state.baseList = option.baseList
+            state.baseCount = option.baseCount
+        },
+        delListItem(state, step) {
+            const index = state.baseList.findIndex(x => x.id === step)
+            state.baseList.splice(index, 1)
         }
     },
     actions: {
@@ -17,8 +27,12 @@ const app = {
                 resolve()
             })
         },
-        async getBaseList() {
-            // const {data:res} = await 
+        async getBaseList(context) {
+            const { data: res } = await baseListQuestion()
+            console.log(res)
+            const baseList = res.items
+            const baseCount = res.counts
+            context.commit('updateList', { baseList, baseCount })
         }
     }
 }

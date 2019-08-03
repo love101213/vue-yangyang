@@ -3,6 +3,7 @@ import { asyncRouterMap } from '@/router'
 import routerMaps from './router'
 // vuex
 import app from './store/app'
+import article from './store/article'
 
 export default {
     install(module, store) {
@@ -11,5 +12,6 @@ export default {
             asyncRouterMap.push(iterator)
         }
         store.registerModule('hmmm', app)
+        store.registerModule('articles', article)
     }
 }
