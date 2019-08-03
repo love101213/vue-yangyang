@@ -1,0 +1,4250 @@
+[
+  {
+    "index": 0,
+    "name": "0-框架",
+    "desc": null,
+    "add_time": 1553067639,
+    "up_time": 1553067639,
+    "list": [
+      {
+        "query_path": {
+          "path": "/frame/file",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 39,
+        "method": "POST",
+        "catid": 59,
+        "title": "文件上传",
+        "path": "/frame/file",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "file",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"fid\":{\"type\":\"string\",\"description\":\"文件id\",\"format\":\"id\"}},\"required\":[\"fid\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd6793c74955d0e00a04048",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd6793c74955d0e00a04047",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067639,
+        "up_time": 1553067639,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/frame/file/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 46,
+        "method": "GET",
+        "catid": 59,
+        "title": "文件访问",
+        "path": "/frame/file/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>直接打印文件流，请区分类型</p>\n<p>图片 =》直接打印输出<br>\n字符串文件 =》 直接打印输出<br>\n其它文件 =》附件下载形式（如 office）</p>\n",
+        "markdown": "直接打印文件流，请区分类型\n\n图片 =》直接打印输出\n字符串文件 =》 直接打印输出\n其它文件 =》附件下载形式（如 office）",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "file",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd679bc74955d0e00a04049",
+            "desc": "文件id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd679bc74955d0e00a0404b",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd679bc74955d0e00a0404a",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067639,
+        "up_time": 1553067639,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/frame/password",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 53,
+        "method": "POST",
+        "catid": 59,
+        "title": "用户修改密码",
+        "path": "/frame/password",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>oldPassword，newPassword 上传 MD5 码</p>\n",
+        "markdown": "oldPassword，newPassword 上传 MD5 码",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd2e83174955d0e00a03f86",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd2e83174955d0e00a03f85",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067639,
+        "up_time": 1553067639,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/frame/register",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 60,
+        "method": "POST",
+        "catid": 59,
+        "title": "用户注册",
+        "path": "/frame/register",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>password 上传 MD5 码</p>\n",
+        "markdown": "password 上传 MD5 码",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"username\":{\"type\":\"string\",\"description\":\"账号\"},\"password\":{\"type\":\"string\",\"description\":\"密码\"}},\"required\":[\"username\",\"password\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"token\":{\"type\":\"string\",\"description\":\"令牌\",\"enum\":[\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds\"]}},\"required\":[\"token\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd2e86f74955d0e00a03f87",
+            "value": "application/json",
+            "name": "Content-Type"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067639,
+        "up_time": 1553067639,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/frame/logout",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 67,
+        "method": "POST",
+        "catid": 59,
+        "title": "用户注销",
+        "path": "/frame/logout",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd2e74474955d0e00a03f81",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd2e74474955d0e00a03f80",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/frame/login",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 74,
+        "method": "POST",
+        "catid": 59,
+        "title": "用户登录",
+        "path": "/frame/login",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>password 上传 MD5 码 SHA256</p>\n",
+        "markdown": "password 上传 MD5 码 SHA256",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"username\":{\"type\":\"string\",\"description\":\"账号\"},\"password\":{\"type\":\"string\",\"description\":\"密码\"}},\"required\":[\"username\",\"password\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"token\":{\"type\":\"string\",\"description\":\"令牌\",\"enum\":[\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds\"]}},\"required\":[\"token\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd81b3474955d0e00a0406f",
+            "value": "application/json",
+            "name": "Content-Type"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/frame/profile",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 81,
+        "method": "POST",
+        "catid": 59,
+        "title": "用户资料",
+        "path": "/frame/profile",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>menus 菜单权限，需要从根节点开始 完整节点列表。</p>\n",
+        "markdown": "menus 菜单权限，需要从根节点开始 完整节点列表。",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"name\":{\"type\":\"string\",\"description\":\"用户名\",\"format\":\"cname\"},\"group\":{\"type\":\"string\",\"description\":\"部门\",\"enum\":[\"传智播客－研究院－项目开发组－前端\"]},\"signature\":{\"type\":\"string\",\"description\":\"签名\",\"enum\":[\"海纳百川，有容乃大\"]},\"avatar\":{\"type\":\"string\",\"description\":\"头像\",\"enum\":[\"https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png\"]},\"roles\":{\"type\":\"object\",\"properties\":{\"menus\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"description\":\"项目\",\"enum\":[\"base\",\"base-manage\",\"base-users\",\"base-menus\",\"base-permissions\",\"base-logs\"]},\"description\":\"菜单\",\"uniqueItems\":true,\"minItems\":3,\"maxItems\":6},\"points\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"description\":\"点\",\"enum\":[\"base-users-list\",\"base-users-add\",\"base-users-delete\",\"base-users-query\",\"base-users-edit\"]},\"description\":\"权限点\",\"uniqueItems\":true,\"minItems\":3,\"maxItems\":5}},\"required\":[\"menus\",\"points\"],\"description\":\"权限\"}},\"required\":[\"name\",\"group\",\"signature\",\"avatar\",\"roles\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd96c4074955d0e00a04091",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd96c4074955d0e00a04090",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "1-用户管理",
+    "desc": null,
+    "add_time": 1553067639,
+    "up_time": 1553067639,
+    "list": [
+      {
+        "query_path": {
+          "path": "/users/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 88,
+        "method": "PUT",
+        "catid": 65,
+        "title": "用户修改",
+        "path": "/users/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"account\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"账号\"},\"fullName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"姓名\"},\"mobile\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"联系电话\"},\"permission_group_id\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"权限组id\"},\"avatar\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"头像\"},\"email\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"邮件\"},\"disabled\":{\"type\":\"boolean\",\"description\":\"是否屏蔽\"}},\"required\":[\"account\",\"fullName\",\"mobile\",\"permission_group_id\",\"avatar\",\"email\",\"disabled\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd2ee7f74955d0e00a03fd0",
+            "desc": "用户id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd2ee7f74955d0e00a03fd2",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd2ee7f74955d0e00a03fd1",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/users",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 95,
+        "method": "GET",
+        "catid": 65,
+        "title": "用户列表",
+        "path": "/users",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"counts\":{\"type\":\"integer\",\"description\":\"总记录数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"pagesize\":{\"type\":\"integer\",\"description\":\"页大小\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":5,\"maximum\":50},\"pages\":{\"type\":\"integer\",\"description\":\"总页数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"page\":{\"type\":\"integer\",\"description\":\"当前页码\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"account\":{\"type\":\"string\",\"format\":\"word\",\"description\":\"账号\"},\"fullName\":{\"type\":\"string\",\"format\":\"cname\",\"description\":\"姓名\"},\"mobile\":{\"type\":\"string\",\"format\":\"mobile\",\"description\":\"联系电话\"},\"permission_group_id\":{\"type\":\"string\",\"format\":\"id\",\"description\":\"权限组id\"},\"permission_group_title\":{\"type\":\"string\",\"description\":\"权限组名称\",\"format\":\"ctitle\"},\"avatar\":{\"type\":\"string\",\"format\":\"url\",\"description\":\"头像\"},\"email\":{\"type\":\"string\",\"format\":\"email\",\"description\":\"邮件\"},\"last_date\":{\"type\":\"integer\",\"minimum\":1537165459,\"maximum\":1537169459,\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"description\":\"最近登录时间\"},\"create_date\":{\"type\":\"integer\",\"minimum\":1537165459,\"maximum\":1537169459,\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"description\":\"注册时间\"},\"disabled\":{\"type\":\"boolean\",\"description\":\"是否屏蔽\"}},\"required\":[\"id\",\"account\",\"fullName\",\"mobile\",\"permission_group_id\",\"avatar\",\"email\",\"last_date\",\"create_date\",\"disabled\",\"permission_group_title\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"counts\",\"pagesize\",\"pages\",\"page\",\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd7fedf74955d0e00a04064",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd7fedf74955d0e00a04063",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "5bd7fedf74955d0e00a04062",
+            "desc": "当前页数",
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "required": "1",
+            "_id": "5bd7fedf74955d0e00a04061",
+            "desc": "页尺寸",
+            "example": "10",
+            "name": "pagesize"
+          },
+          {
+            "required": "1",
+            "_id": "5bd7fedf74955d0e00a04060",
+            "desc": "关键字",
+            "name": "keyword"
+          },
+          {
+            "required": "0",
+            "_id": "5bd7fedf74955d0e00a0405f",
+            "desc": "是否屏蔽 1 屏蔽 0 开启",
+            "example": "",
+            "name": "disabled"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/users/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 102,
+        "method": "DELETE",
+        "catid": 65,
+        "title": "用户删除",
+        "path": "/users/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd2ee8774955d0e00a03fd3",
+            "desc": "用户id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd2ee8774955d0e00a03fd5",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd2ee8774955d0e00a03fd4",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/users/:id/disabled",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 109,
+        "method": "PUT",
+        "catid": 65,
+        "title": "用户屏蔽、启用",
+        "path": "/users/:id/disabled",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"disabled\":{\"type\":\"boolean\",\"description\":\"是否屏蔽\"}},\"required\":[\"disabled\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd2eff174955d0e00a03fe0",
+            "desc": "用户id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd2eff174955d0e00a03fe2",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd2eff174955d0e00a03fe1",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/users",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 116,
+        "method": "POST",
+        "catid": 65,
+        "title": "用户添加",
+        "path": "/users",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>默认密码&nbsp; 123456</p>\n",
+        "markdown": "默认密码  123456",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"account\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"账号\"},\"fullName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"姓名\"},\"mobile\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"联系电话\"},\"permission_group_id\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"权限组id\"},\"avatar\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"头像\"},\"email\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"邮件\"},\"disabled\":{\"type\":\"boolean\",\"description\":\"是否屏蔽\"}},\"required\":[\"account\",\"fullName\",\"mobile\",\"permission_group_id\",\"avatar\",\"email\",\"disabled\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd7c48e74955d0e00a04058",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd7c48e74955d0e00a04057",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/users/simple",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 123,
+        "method": "GET",
+        "catid": 65,
+        "title": "用户简单列表",
+        "path": "/users/simple",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"fullName\":{\"type\":\"string\",\"format\":\"cname\",\"description\":\"姓名\"}},\"required\":[\"id\",\"fullName\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd7fee774955d0e00a04068",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd7fee774955d0e00a04067",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "5bd7fee774955d0e00a04066",
+            "desc": "关键字",
+            "name": "keyword"
+          },
+          {
+            "required": "0",
+            "_id": "5bd7fee774955d0e00a04065",
+            "desc": "是否屏蔽 1 屏蔽 0 开启",
+            "example": "",
+            "name": "disabled"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/users/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 130,
+        "method": "GET",
+        "catid": 65,
+        "title": "用户详情",
+        "path": "/users/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"account\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"账号\"},\"fullName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"姓名\"},\"mobile\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"联系电话\"},\"permission_group_id\":{\"type\":\"integer\",\"description\":\"权限组id\"},\"permission_group_title\":{\"type\":\"string\",\"description\":\"权限组\",\"format\":\"ctitle\"},\"avatar\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"头像\"},\"email\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"邮件\"},\"last_date\":{\"type\":\"integer\",\"minimum\":1537165459,\"maximum\":1537169459,\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"description\":\"最近登录时间\"},\"create_date\":{\"type\":\"integer\",\"minimum\":1537165459,\"maximum\":1537169459,\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"description\":\"注册时间\"},\"disabled\":{\"type\":\"boolean\",\"description\":\"是否屏蔽\"}},\"required\":[\"id\",\"account\",\"fullName\",\"mobile\",\"permission_group_id\",\"avatar\",\"email\",\"last_date\",\"create_date\",\"disabled\",\"permission_group_title\"]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd8078c74955d0e00a0406c",
+            "desc": "用户id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd8078c74955d0e00a0406e",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd8078c74955d0e00a0406d",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/users/:id/password",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 137,
+        "method": "PUT",
+        "catid": 65,
+        "title": "用户重置密码",
+        "path": "/users/:id/password",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>password 上传 MD5 码 SHA256</p>\n",
+        "markdown": "password 上传 MD5 码 SHA256",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"password\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"密码\"}},\"required\":[\"password\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd81b4374955d0e00a04070",
+            "desc": "用户id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd81b4374955d0e00a04072",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd81b4374955d0e00a04071",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "2-菜单管理",
+    "desc": null,
+    "add_time": 1553067639,
+    "up_time": 1553067639,
+    "list": [
+      {
+        "query_path": {
+          "path": "/menus/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 144,
+        "method": "PUT",
+        "catid": 71,
+        "title": "菜单修改",
+        "path": "/menus/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>菜单项不能挂在权限点上<br>\n权限点只能挂在菜单项上</p>\n",
+        "markdown": "菜单项不能挂在权限点上\n权限点只能挂在菜单项上",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"isPoint\":{\"type\":\"boolean\",\"description\":\"是否权限点\"},\"pid\":{\"type\":\"integer\",\"description\":\"父 id\"},\"code\":{\"type\":\"string\",\"description\":\"菜单代码 全局唯一\"},\"title\":{\"type\":\"string\",\"description\":\"菜单标题\"}},\"required\":[\"isPoint\",\"pid\",\"code\",\"title\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd9062d74955d0e00a04073",
+            "desc": "项id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd9062d74955d0e00a04075",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd9062d74955d0e00a04074",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/menus",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 151,
+        "method": "GET",
+        "catid": 71,
+        "title": "菜单列表",
+        "path": "/menus",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>权限点只能挂在菜单项上</p>\n",
+        "markdown": "权限点只能挂在菜单项上",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "[\n    {\n        \"id\": 1101,\n        \"pid\": 1001,\n        \"code\": \"base\",\n        \"title\": \"数据管理\",\n        \"childs\": [                                         // 菜单项\n            {\n                \"id\": 1102,\n                \"pid\": 1101,\n                \"code\": \"base-users\",\n                \"title\": \"用户管理\",\n                \"points\": [                                 // 权限点\n                    {\n                        \"id\": 1106,\n                        \"pid\": 1102,\n                        \"code\": \"base-users-list\",\n                        \"title\": \"用户管理-读取\"\n                    },\n                    {\n                        \"id\": 1107,\n                        \"pid\": 1102,\n                        \"code\": \"base-users-edit\",\n                        \"title\": \"用户管理-修改\"\n                    }\n                ]\n            },\n            {\n                \"id\": 1103,\n                \"pid\": 1101,\n                \"code\": \"base-menus\",\n                \"title\": \"菜单管理\",\n            },\n            {\n                \"id\": 1104,\n                \"pid\": 1101,\n                \"code\": \"base-permissions\",\n                \"title\": \"权限管理\",\n            }\n        ]\n    }\n]",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd90b9774955d0e00a0407e",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd90b9774955d0e00a0407d",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/menus/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 158,
+        "method": "DELETE",
+        "catid": 71,
+        "title": "菜单删除",
+        "path": "/menus/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>层级删除</p>\n",
+        "markdown": "层级删除",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd2f25c74955d0e00a03fed",
+            "desc": "项id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd2f25c74955d0e00a03fef",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd2f25c74955d0e00a03fee",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/menus",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 165,
+        "method": "POST",
+        "catid": 71,
+        "title": "菜单添加",
+        "path": "/menus",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "<p>菜单项不能挂在权限点上<br>\n权限点只能挂在菜单项上</p>\n",
+        "markdown": "菜单项不能挂在权限点上\n权限点只能挂在菜单项上",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"isPoint\":{\"type\":\"boolean\",\"description\":\"是否权限点\"},\"pid\":{\"type\":\"integer\",\"description\":\"父 id\"},\"code\":{\"type\":\"string\",\"description\":\"菜单代码 全局唯一\"},\"title\":{\"type\":\"string\",\"description\":\"菜单标题\"}},\"required\":[\"isPoint\",\"pid\",\"code\",\"title\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd9063874955d0e00a04077",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd9063874955d0e00a04076",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/menus/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 172,
+        "method": "GET",
+        "catid": 71,
+        "title": "菜单详情",
+        "path": "/menus/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"pid\":{\"type\":\"integer\",\"description\":\"父节点id\"},\"isPoint\":{\"type\":\"boolean\",\"description\":\"是否权限点\"},\"code\":{\"type\":\"string\",\"description\":\"代码\",\"enum\":[\"base-users\"]},\"title\":{\"type\":\"string\",\"description\":\"名称\",\"enum\":[\"用户管理\"]},\"id\":{\"type\":\"integer\",\"description\":\"编号\",\"exclusiveMinimum\":true,\"minimum\":0}},\"required\":[\"pid\",\"isPoint\",\"code\",\"title\",\"id\"]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd948b774955d0e00a04082",
+            "desc": "项id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd948b774955d0e00a04084",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd948b774955d0e00a04083",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "3-权限组管理",
+    "desc": null,
+    "add_time": 1553067639,
+    "up_time": 1553067639,
+    "list": [
+      {
+        "query_path": {
+          "path": "/permissions/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 179,
+        "method": "PUT",
+        "catid": 77,
+        "title": "权限组修改",
+        "path": "/permissions/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"title\":{\"type\":\"string\",\"description\":\"标题\"},\"permissions\":{\"type\":\"array\",\"items\":{\"type\":\"integer\",\"description\":\"项id\"},\"description\":\"权限ids [1101,1102,1103]\"}},\"required\":[\"title\",\"permissions\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{},\"required\":[]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd2f79a74955d0e00a04033",
+            "desc": "数据id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd2f79a74955d0e00a04035",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd2f79a74955d0e00a04034",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/permissions",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 186,
+        "method": "GET",
+        "catid": 77,
+        "title": "权限组列表",
+        "path": "/permissions",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"counts\":{\"type\":\"integer\",\"description\":\"总记录数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"pagesize\":{\"type\":\"integer\",\"description\":\"页大小\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":5,\"maximum\":50},\"pages\":{\"type\":\"integer\",\"description\":\"总页数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"page\":{\"type\":\"integer\",\"description\":\"当前页码\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"title\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"名称\"},\"create_date\":{\"type\":\"integer\",\"description\":\"创建时间\"}},\"required\":[\"id\",\"title\",\"create_date\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"counts\",\"pagesize\",\"pages\",\"page\",\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd96ba574955d0e00a0408f",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd96ba574955d0e00a0408e",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "5bd96ba574955d0e00a0408d",
+            "desc": "当前页数",
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "required": "1",
+            "_id": "5bd96ba574955d0e00a0408c",
+            "desc": "页尺寸",
+            "example": "10",
+            "name": "pagesize"
+          },
+          {
+            "required": "1",
+            "_id": "5bd96ba574955d0e00a0408b",
+            "desc": "关键字",
+            "name": "keyword"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/permissions/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 193,
+        "method": "DELETE",
+        "catid": 77,
+        "title": "权限组删除",
+        "path": "/permissions/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{},\"required\":[]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd2f7d474955d0e00a04039",
+            "desc": "数据id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd2f7d474955d0e00a0403b",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd2f7d474955d0e00a0403a",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/permissions",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 200,
+        "method": "POST",
+        "catid": 77,
+        "title": "权限组添加",
+        "path": "/permissions",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"title\":{\"type\":\"string\",\"description\":\"标题\"},\"permissions\":{\"type\":\"array\",\"items\":{\"type\":\"integer\",\"description\":\"项id\"},\"description\":\"权限ids [1101,1102,1103]\"}},\"required\":[\"title\",\"permissions\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{},\"required\":[]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd2f7a974955d0e00a04037",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd2f7a974955d0e00a04036",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/permissions/simple",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 207,
+        "method": "GET",
+        "catid": 77,
+        "title": "权限组简单列表",
+        "path": "/permissions/simple",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"title\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"名称\"}},\"required\":[\"id\",\"title\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd7feb574955d0e00a0405e",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd7feb574955d0e00a0405d",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "5bd7feb574955d0e00a0405c",
+            "desc": "关键字",
+            "name": "keyword"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553067640,
+        "up_time": 1553067640,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/permissions/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 214,
+        "method": "GET",
+        "catid": 77,
+        "title": "权限组详情",
+        "path": "/permissions/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"title\":{\"type\":\"string\",\"description\":\"标题\"},\"permissions\":{\"type\":\"array\",\"items\":{\"type\":\"integer\",\"description\":\"项id\"},\"description\":\"权限ids [1101,1102,1103]\"}},\"required\":[\"title\",\"permissions\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\",\"description\":\"名称\",\"format\":\"ctitle\"},\"permissions\":{\"type\":\"array\",\"items\":{\"type\":\"integer\",\"description\":\"id\"},\"description\":\"权限ids [1101,1102,1103]\"},\"create_date\":{\"type\":\"integer\",\"description\":\"创建时间\"},\"id\":{\"type\":\"integer\",\"description\":\"编号\"}},\"required\":[\"title\",\"permissions\",\"create_date\",\"id\"]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5bd96b9674955d0e00a04088",
+            "desc": "数据id",
+            "name": "id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5bd96b9674955d0e00a0408a",
+            "value": "application/json",
+            "name": "Content-Type"
+          },
+          {
+            "required": "1",
+            "_id": "5bd96b9674955d0e00a04089",
+            "desc": "令牌",
+            "example": "",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "name": "Authorization"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553067641,
+        "up_time": 1553067641,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "4-企业管理",
+    "desc": null,
+    "add_time": 1553072335,
+    "up_time": 1553072886,
+    "list": [
+      {
+        "query_path": {
+          "path": "/companys",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 221,
+        "method": "GET",
+        "catid": 83,
+        "title": "企业管理列表",
+        "path": "/companys",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"counts\":{\"type\":\"integer\",\"description\":\"总记录数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"pagesize\":{\"type\":\"integer\",\"description\":\"页大小\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":5,\"maximum\":50},\"pages\":{\"type\":\"integer\",\"description\":\"总页数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"page\":{\"type\":\"integer\",\"description\":\"当前页码\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\",\"mock\":{\"mock\":\"@id\"}},\"number\":{\"type\":\"string\",\"description\":\"企业编号\",\"mock\":{\"mock\":\"@id\"}},\"isFamous\":{\"type\":\"boolean\",\"description\":\"是否名企\",\"mock\":{\"mock\":\"@boolean\"}},\"shortName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"企业简称\",\"mock\":{\"mock\":\"@ctitle\"}},\"company\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"所属公司\",\"mock\":{\"mock\":\"@ctitle\"}},\"province\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"省份\",\"mock\":{\"mock\":\"@province\"}},\"city\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"城市\",\"mock\":{\"mock\":\"@city\"}},\"tags\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"标签\",\"mock\":{\"mock\":\"@title\"}},\"remarks\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"备注\",\"mock\":{\"mock\":\"@cparagraph\"}},\"creatorID\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"创建者\",\"mock\":{\"mock\":\"@cname\"}},\"addDate\":{\"type\":\"string\",\"description\":\"创建日期\",\"mock\":{\"mock\":\"@date\"}},\"state\":{\"type\":\"boolean\",\"description\":\"状态\",\"mock\":{\"mock\":\"@boolean\"}}},\"required\":[\"id\",\"number\",\"isFamous\",\"shortName\",\"company\",\"province\",\"city\",\"tags\",\"remarks\",\"creatorID\",\"addDate\",\"state\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"counts\",\"pagesize\",\"pages\",\"page\",\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c9275568dc28e002649ea64",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c9275568dc28e002649ea63",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c9275568dc28e002649ea62",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c9275568dc28e002649ea61",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c9275568dc28e002649ea60",
+            "name": "tags",
+            "desc": "标签名称"
+          },
+          {
+            "required": "0",
+            "_id": "5c9275568dc28e002649ea5f",
+            "name": "province",
+            "example": "",
+            "desc": "企业所在地省份"
+          },
+          {
+            "required": "0",
+            "_id": "5c9275568dc28e002649ea5e",
+            "name": "city",
+            "example": "",
+            "desc": "企业所在城市"
+          },
+          {
+            "required": "0",
+            "_id": "5c9275568dc28e002649ea5d",
+            "name": "shortName",
+            "example": "",
+            "desc": "企业简称"
+          },
+          {
+            "required": "0",
+            "_id": "5c9275568dc28e002649ea5c",
+            "name": "state",
+            "example": "1 启用 0 禁用",
+            "desc": "状态"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553072427,
+        "up_time": 1553102166,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/companys/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 1,
+        "tag": [],
+        "_id": 263,
+        "method": "GET",
+        "catid": 83,
+        "title": "企业管理详情",
+        "path": "/companys/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"编号\",\"mock\":{\"mock\":\"@id\"}},\"number\":{\"type\":\"string\",\"description\":\"企业编号\",\"mock\":{\"mock\":\"@id\"}},\"isFamous\":{\"type\":\"boolean\",\"description\":\"是否名企\",\"mock\":{\"mock\":\"@boolean\"}},\"shortName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"企业简称\",\"mock\":{\"mock\":\"@ctitle\"}},\"company\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"所属公司\",\"mock\":{\"mock\":\"@ctitle\"}},\"province\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"省份\",\"mock\":{\"mock\":\"@province\"}},\"city\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"城市\",\"mock\":{\"mock\":\"@city\"}},\"tags\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"标签\",\"mock\":{\"mock\":\"@word\"}},\"remarks\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"备注\",\"mock\":{\"mock\":\"@sentence\"}}},\"required\":[\"id\",\"number\",\"isFamous\",\"shortName\",\"company\",\"province\",\"city\",\"tags\",\"remarks\"]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c927adf8dc28e002649ea71",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c927adf8dc28e002649ea73",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c927adf8dc28e002649ea72",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553103370,
+        "up_time": 1553103583,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/companys",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 2,
+        "tag": [],
+        "_id": 228,
+        "method": "POST",
+        "catid": 83,
+        "title": "企业管理添加",
+        "path": "/companys",
+        "project_id": 20,
+        "res_body_type": "raw",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"isFamous\":{\"type\":\"boolean\",\"description\":\"是否名企\"},\"shortName\":{\"type\":\"string\",\"description\":\"企业简称\"},\"company\":{\"type\":\"string\",\"description\":\"所属公司\"},\"province\":{\"type\":\"string\",\"description\":\"省份\"},\"city\":{\"type\":\"string\",\"description\":\"城市\"},\"tags\":{\"type\":\"string\",\"description\":\"标签\"},\"remarks\":{\"type\":\"string\",\"description\":\"备注\"}},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c921cd48dc28e002649e9ce",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c921cd48dc28e002649e9cd",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c921cd48dc28e002649e9cc",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c921cd48dc28e002649e9cb",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c921cd48dc28e002649e9ca",
+            "name": "tags",
+            "desc": "标签名称"
+          },
+          {
+            "required": "0",
+            "_id": "5c921cd48dc28e002649e9c9",
+            "name": "province",
+            "example": "",
+            "desc": "企业所在地省份"
+          },
+          {
+            "required": "0",
+            "_id": "5c921cd48dc28e002649e9c8",
+            "name": "city",
+            "example": "",
+            "desc": "企业所在城市"
+          },
+          {
+            "required": "0",
+            "_id": "5c921cd48dc28e002649e9c7",
+            "name": "shortName",
+            "example": "",
+            "desc": "企业简称"
+          },
+          {
+            "required": "0",
+            "_id": "5c921cd48dc28e002649e9c6",
+            "name": "state",
+            "example": "1 启用 0 禁用",
+            "desc": "状态"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553079310,
+        "up_time": 1553079508,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/companys/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 3,
+        "tag": [],
+        "_id": 235,
+        "method": "PUT",
+        "catid": 83,
+        "title": "企业管理修改",
+        "path": "/companys/:id",
+        "project_id": 20,
+        "res_body_type": "raw",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"编号\"},\"number\":{\"type\":\"integer\",\"description\":\"企业编号\"},\"isFamous\":{\"type\":\"boolean\",\"description\":\"是否名企\"},\"shortName\":{\"type\":\"string\",\"description\":\"企业简称\"},\"company\":{\"type\":\"string\",\"description\":\"所属公司\"},\"province\":{\"type\":\"string\",\"description\":\"省份\"},\"city\":{\"type\":\"string\",\"description\":\"城市\"},\"tags\":{\"type\":\"string\",\"description\":\"标签\"},\"remarks\":{\"type\":\"string\",\"description\":\"备注\"}},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c921d618dc28e002649e9eb",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c921d618dc28e002649e9ea",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c921d618dc28e002649e9e9",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c921d618dc28e002649e9e8",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d618dc28e002649e9e7",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d618dc28e002649e9e6",
+            "name": "tags",
+            "desc": "标签名称"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d618dc28e002649e9e5",
+            "name": "province",
+            "example": "",
+            "desc": "企业所在地省份"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d618dc28e002649e9e4",
+            "name": "city",
+            "example": "",
+            "desc": "企业所在城市"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d618dc28e002649e9e3",
+            "name": "shortName",
+            "example": "",
+            "desc": "企业简称"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d618dc28e002649e9e2",
+            "name": "state",
+            "example": "1 启用 0 禁用",
+            "desc": "状态"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553079431,
+        "up_time": 1553079649,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/companys/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 4,
+        "tag": [],
+        "_id": 242,
+        "method": "DELETE",
+        "catid": 83,
+        "title": "企业管理删除",
+        "path": "/companys/:id",
+        "project_id": 20,
+        "res_body_type": "raw",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c921d4f8dc28e002649e9e1",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c921d4f8dc28e002649e9e0",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c921d4f8dc28e002649e9df",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c921d4f8dc28e002649e9de",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d4f8dc28e002649e9dd",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d4f8dc28e002649e9dc",
+            "name": "tags",
+            "desc": "标签名称"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d4f8dc28e002649e9db",
+            "name": "province",
+            "example": "",
+            "desc": "企业所在地省份"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d4f8dc28e002649e9da",
+            "name": "city",
+            "example": "",
+            "desc": "企业所在城市"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d4f8dc28e002649e9d9",
+            "name": "shortName",
+            "example": "",
+            "desc": "企业简称"
+          },
+          {
+            "required": "0",
+            "_id": "5c921d4f8dc28e002649e9d8",
+            "name": "state",
+            "example": "1 启用 0 禁用",
+            "desc": "状态"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553079529,
+        "up_time": 1553079631,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/companys/:id/:state",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 5,
+        "tag": [],
+        "_id": 249,
+        "method": "POST",
+        "catid": 83,
+        "title": "企业管理设置状态",
+        "path": "/companys/:id/:state",
+        "project_id": 20,
+        "res_body_type": "raw",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c9225ad8dc28e002649e9f8",
+            "name": "id",
+            "desc": "数据id"
+          },
+          {
+            "_id": "5c9225ad8dc28e002649e9f7",
+            "name": "state",
+            "desc": "状态 0 屏蔽 1 开启"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c9225ad8dc28e002649ea01",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c9225ad8dc28e002649ea00",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c9225ad8dc28e002649e9ff",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c9225ad8dc28e002649e9fe",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c9225ad8dc28e002649e9fd",
+            "name": "tags",
+            "desc": "标签名称"
+          },
+          {
+            "required": "0",
+            "_id": "5c9225ad8dc28e002649e9fc",
+            "name": "province",
+            "example": "",
+            "desc": "企业所在地省份"
+          },
+          {
+            "required": "0",
+            "_id": "5c9225ad8dc28e002649e9fb",
+            "name": "city",
+            "example": "",
+            "desc": "企业所在城市"
+          },
+          {
+            "required": "0",
+            "_id": "5c9225ad8dc28e002649e9fa",
+            "name": "shortName",
+            "example": "",
+            "desc": "企业简称"
+          },
+          {
+            "required": "0",
+            "_id": "5c9225ad8dc28e002649e9f9",
+            "name": "state",
+            "example": "1 启用 0 禁用",
+            "desc": "状态"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553081681,
+        "up_time": 1553081773,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "5-题库管理",
+    "desc": null,
+    "add_time": 1553072345,
+    "up_time": 1553072891,
+    "list": [
+      {
+        "query_path": {
+          "path": "/questions/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 284,
+        "method": "PUT",
+        "catid": 89,
+        "title": "基础题库修改",
+        "path": "/questions/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"编号\"},\"number\":{\"type\":\"integer\",\"description\":\"试题编号\"},\"subjectID\":{\"type\":\"string\",\"description\":\"学科\"},\"catalogID\":{\"type\":\"string\",\"description\":\"目录\"},\"enterpriseID\":{\"type\":\"string\",\"description\":\"企业\"},\"city\":{\"type\":\"string\",\"description\":\"城市\"},\"direction\":{\"type\":\"string\",\"description\":\"方向\"},\"questionType\":{\"type\":\"string\",\"description\":\"题型\"},\"difficulty\":{\"type\":\"string\",\"description\":\"难度\"},\"question\":{\"type\":\"string\",\"description\":\"题干\"},\"option\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"编号\"},\"code\":{\"type\":\"string\",\"description\":\"代码\"},\"title\":{\"type\":\"string\",\"description\":\"标题\"},\"img\":{\"type\":\"string\",\"description\":\"图片URL\"}}},\"description\":\"选项\"},\"videoURL\":{\"type\":\"string\",\"description\":\"解析视频\"},\"answerID\":{\"type\":\"string\",\"description\":\"答案解析\"},\"remarks\":{\"type\":\"string\",\"description\":\"题目备注\"},\"tags\":{\"type\":\"string\",\"description\":\"试题标签\"},\"creator\":{\"type\":\"string\",\"description\":\"录入人\"},\"addDate\":{\"type\":\"integer\",\"description\":\"录入时间\"}},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c9294a88dc28e002649eaf4",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c9294a88dc28e002649eaf3",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c9294a88dc28e002649eaf2",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553110139,
+        "up_time": 1553110184,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/questions",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 256,
+        "method": "GET",
+        "catid": 89,
+        "title": "基础题库列表",
+        "path": "/questions",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"counts\":{\"type\":\"integer\",\"description\":\"总记录数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"pagesize\":{\"type\":\"integer\",\"description\":\"页大小\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":5,\"maximum\":50},\"pages\":{\"type\":\"integer\",\"description\":\"总页数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"page\":{\"type\":\"integer\",\"description\":\"当前页码\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"编号\",\"mock\":{\"mock\":\"@id\"}},\"number\":{\"type\":\"string\",\"description\":\"试题编号\",\"mock\":{\"mock\":\"@id\"}},\"subjectID\":{\"type\":\"number\",\"description\":\"学科\",\"mock\":{\"mock\":\"@integer\"}},\"catalogID\":{\"type\":\"number\",\"description\":\"目录\",\"mock\":{\"mock\":\"@integer\"}},\"enterpriseID\":{\"type\":\"number\",\"description\":\"企业\",\"mock\":{\"mock\":\"@integer\"}},\"province\":{\"type\":\"string\",\"description\":\"省份\"},\"city\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"城市\"},\"direction\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"方向\"},\"questionType\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"题型\"},\"difficulty\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"难度\"},\"question\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"题干\"},\"videoURL\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"解析视频\"},\"answer\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"答案解析\"},\"remarks\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"题目备注\"},\"tags\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"试题标签\"},\"creator\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"录入人\",\"mock\":{\"mock\":\"@cname\"}},\"addDate\":{\"type\":\"string\",\"description\":\"录入时间\",\"mock\":{\"mock\":\"@datetime\"}}},\"required\":[\"id\",\"number\",\"subjectID\",\"catalogID\",\"enterpriseID\",\"city\",\"direction\",\"questionType\",\"difficulty\",\"question\",\"videoURL\",\"answer\",\"remarks\",\"tags\",\"creator\",\"addDate\",\"province\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"counts\",\"pagesize\",\"pages\",\"page\",\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c9299988dc28e002649eb78",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c9299988dc28e002649eb77",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb76",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb75",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb74",
+            "name": "subjectID",
+            "example": "",
+            "desc": "学科"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb73",
+            "name": "difficulty",
+            "example": "",
+            "desc": "难度"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb72",
+            "name": "questionType",
+            "example": "",
+            "desc": "试题类型"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb71",
+            "name": "tags",
+            "desc": "标签名称"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb70",
+            "name": "province",
+            "example": "",
+            "desc": "企业所在地省份"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb6f",
+            "name": "city",
+            "example": "",
+            "desc": "企业所在城市"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb6e",
+            "name": "keyword",
+            "example": "",
+            "desc": "关键字"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb6d",
+            "name": "remarks",
+            "example": "",
+            "desc": "题目备注"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb6c",
+            "name": "shortName",
+            "example": "",
+            "desc": "企业简称"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb6b",
+            "name": "direction",
+            "example": "",
+            "desc": "方向"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb6a",
+            "name": "creatorID",
+            "example": "",
+            "desc": "录入人"
+          },
+          {
+            "required": "0",
+            "_id": "5c9299988dc28e002649eb69",
+            "name": "catalogID",
+            "example": "",
+            "desc": "目录"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553100298,
+        "up_time": 1553111448,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/questions/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 291,
+        "method": "DELETE",
+        "catid": 89,
+        "title": "基础题库删除",
+        "path": "/questions/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c9297508dc28e002649eafe",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c9297508dc28e002649eb00",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c9297508dc28e002649eaff",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553110267,
+        "up_time": 1553110864,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/questions",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 277,
+        "method": "POST",
+        "catid": 89,
+        "title": "基础题库添加",
+        "path": "/questions",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"number\":{\"type\":\"integer\",\"description\":\"试题编号\"},\"subjectID\":{\"type\":\"string\",\"description\":\"学科\"},\"catalogID\":{\"type\":\"string\",\"description\":\"目录\"},\"enterpriseID\":{\"type\":\"string\",\"description\":\"企业\"},\"city\":{\"type\":\"string\",\"description\":\"城市\"},\"direction\":{\"type\":\"string\",\"description\":\"方向\"},\"questionType\":{\"type\":\"string\",\"description\":\"题型\"},\"difficulty\":{\"type\":\"string\",\"description\":\"难度\"},\"question\":{\"type\":\"string\",\"description\":\"题干\"},\"option\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"编号\"},\"code\":{\"type\":\"string\",\"description\":\"代码\"},\"title\":{\"type\":\"string\",\"description\":\"标题\"},\"img\":{\"type\":\"string\",\"description\":\"图片URL\"}}},\"description\":\"选项\"},\"videoURL\":{\"type\":\"string\",\"description\":\"解析视频\"},\"answerID\":{\"type\":\"string\",\"description\":\"答案解析\"},\"remarks\":{\"type\":\"string\",\"description\":\"题目备注\"},\"tags\":{\"type\":\"string\",\"description\":\"试题标签\"},\"creator\":{\"type\":\"string\",\"description\":\"录入人\"},\"addDate\":{\"type\":\"integer\",\"description\":\"录入时间\"}},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c9294b18dc28e002649eaf6",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c9294b18dc28e002649eaf5",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553109932,
+        "up_time": 1553110193,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/questions/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 270,
+        "method": "GET",
+        "catid": 89,
+        "title": "基础题库详情",
+        "path": "/questions/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"number\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":0,\"maximum\":500,\"description\":\"试题编号\"},\"subjectID\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"学科\"},\"catalogID\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"目录\"},\"enterpriseID\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"企业\"},\"province\":{\"type\":\"string\",\"description\":\"省份\",\"mock\":{\"mock\":\"@province\"}},\"city\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"城市\",\"mock\":{\"mock\":\"@city\"}},\"direction\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"方向\"},\"questionType\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"题型\"},\"difficulty\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"难度\"},\"question\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"题干\",\"mock\":{\"mock\":\"@sentence\"}},\"option\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"代码\",\"mock\":{\"mock\":\"@word\"}},\"title\":{\"type\":\"string\",\"description\":\"标题\",\"mock\":{\"mock\":\"@ctitle\"}},\"img\":{\"type\":\"string\",\"description\":\"图片\"},\"id\":{\"type\":\"string\",\"description\":\"编号\",\"mock\":{\"mock\":\"@id\"}}},\"required\":[\"code\",\"img\",\"title\",\"id\"]},\"description\":\"选项\",\"uniqueItems\":true,\"minItems\":3,\"maxItems\":5},\"videoURL\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"解析视频\"},\"answerID\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"答案解析\",\"mock\":{\"mock\":\"@cparagraph\"}},\"remarks\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"题目备注\",\"mock\":{\"mock\":\"@cparagraph\"}},\"tags\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"试题标签\"}},\"required\":[\"id\",\"number\",\"subjectID\",\"catalogID\",\"enterpriseID\",\"city\",\"direction\",\"questionType\",\"difficulty\",\"question\",\"option\",\"videoURL\",\"answerID\",\"remarks\",\"tags\",\"province\"]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c9293888dc28e002649eae3",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c9293888dc28e002649eae5",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c9293888dc28e002649eae4",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553108980,
+        "up_time": 1553109896,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/questions/choice/:id/:publish",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 305,
+        "method": "POST",
+        "catid": 89,
+        "title": "精选题库上下架",
+        "path": "/questions/choice/:id/:publish",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c9493a1860ce9003086ab71",
+            "name": "id",
+            "desc": "数据id"
+          },
+          {
+            "_id": "5c9493a1860ce9003086ab70",
+            "name": "publish",
+            "desc": "1 上架 0 下架"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c9493a1860ce9003086ab73",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c9493a1860ce9003086ab72",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553240852,
+        "up_time": 1553240993,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/questions/choice",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 298,
+        "method": "GET",
+        "catid": 89,
+        "title": "精选题库列表",
+        "path": "/questions/choice",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"counts\":{\"type\":\"integer\",\"description\":\"总记录数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"pagesize\":{\"type\":\"integer\",\"description\":\"页大小\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":5,\"maximum\":50},\"pages\":{\"type\":\"integer\",\"description\":\"总页数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"page\":{\"type\":\"integer\",\"description\":\"当前页码\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"编号\",\"mock\":{\"mock\":\"@id\"}},\"number\":{\"type\":\"string\",\"description\":\"试题编号\",\"mock\":{\"mock\":\"@id\"}},\"subjectID\":{\"type\":\"number\",\"description\":\"学科\",\"mock\":{\"mock\":\"@integer\"}},\"catalogID\":{\"type\":\"number\",\"description\":\"目录\",\"mock\":{\"mock\":\"@integer\"}},\"enterpriseID\":{\"type\":\"number\",\"description\":\"企业\",\"mock\":{\"mock\":\"@integer\"}},\"province\":{\"type\":\"string\",\"description\":\"省份\"},\"city\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"城市\"},\"direction\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"方向\"},\"questionType\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"题型\"},\"difficulty\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"难度\"},\"question\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"题干\"},\"videoURL\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"解析视频\"},\"answer\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"答案解析\"},\"remarks\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"题目备注\"},\"tags\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"试题标签\"},\"creator\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"录入人\",\"mock\":{\"mock\":\"@cname\"}},\"addDate\":{\"type\":\"string\",\"description\":\"录入时间\",\"mock\":{\"mock\":\"@datetime\"}},\"chkState\":{\"type\":\"string\",\"description\":\"筛选状态 0 待审核 1 通过 2 拒绝\"},\"chkUser\":{\"type\":\"string\",\"description\":\"审核人\",\"mock\":{\"mock\":\"@cname\"}},\"chkDate\":{\"type\":\"string\",\"description\":\"审核日期\",\"mock\":{\"mock\":\"@datetime\"}},\"chkRemarks\":{\"type\":\"string\",\"description\":\"审核意见\",\"mock\":{\"mock\":\"@ctitle\"}},\"publishState\":{\"type\":\"string\",\"description\":\"发布状态 0 待发布 1 已发布 2 已下架\"}},\"required\":[\"id\",\"number\",\"subjectID\",\"catalogID\",\"enterpriseID\",\"city\",\"direction\",\"questionType\",\"difficulty\",\"question\",\"videoURL\",\"answer\",\"remarks\",\"tags\",\"creator\",\"addDate\",\"province\",\"chkState\",\"chkUser\",\"chkDate\",\"chkRemarks\",\"publishState\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"counts\",\"pagesize\",\"pages\",\"page\",\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c92a0048dc28e002649eb89",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c92a0048dc28e002649eb88",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb87",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb86",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb85",
+            "name": "subjectID",
+            "example": "",
+            "desc": "学科"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb84",
+            "name": "difficulty",
+            "example": "",
+            "desc": "难度"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb83",
+            "name": "questionType",
+            "example": "",
+            "desc": "试题类型"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb82",
+            "name": "tags",
+            "desc": "标签名称"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb81",
+            "name": "province",
+            "example": "",
+            "desc": "企业所在地省份"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb80",
+            "name": "city",
+            "example": "",
+            "desc": "企业所在城市"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb7f",
+            "name": "keyword",
+            "example": "",
+            "desc": "关键字"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb7e",
+            "name": "remarks",
+            "example": "",
+            "desc": "题目备注"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb7d",
+            "name": "shortName",
+            "example": "",
+            "desc": "企业简称"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb7c",
+            "name": "direction",
+            "example": "",
+            "desc": "方向"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb7b",
+            "name": "creatorID",
+            "example": "",
+            "desc": "录入人"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb7a",
+            "name": "catalogID",
+            "example": "",
+            "desc": "目录"
+          },
+          {
+            "required": "0",
+            "_id": "5c92a0048dc28e002649eb79",
+            "name": "chkState",
+            "example": "0 待审核 1 通过 2 拒绝",
+            "desc": "审核状态"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553110922,
+        "up_time": 1553113092,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/questions/randoms/",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 326,
+        "method": "GET",
+        "catid": 89,
+        "title": "组题列表",
+        "path": "/questions/randoms/",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"counts\":{\"type\":\"integer\",\"description\":\"总记录数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"pagesize\":{\"type\":\"integer\",\"description\":\"页大小\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":5,\"maximum\":50},\"pages\":{\"type\":\"integer\",\"description\":\"总页数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"page\":{\"type\":\"integer\",\"description\":\"当前页码\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"编号\",\"mock\":{\"mock\":\"@id\"}},\"addTime\":{\"type\":\"string\",\"description\":\"组题时间\",\"mock\":{\"mock\":\"@datetime\"}},\"userName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"用户名\",\"mock\":{\"mock\":\"@cname\"}},\"questionIDs\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"试题ID\",\"mock\":{\"mock\":\"@id\"}},\"progressOfAnswer\":{\"type\":\"integer\",\"description\":\"答题进度\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":10,\"maximum\":100},\"accuracyRate\":{\"type\":\"integer\",\"description\":\"正确率\",\"exclusiveMinimum\":true,\"minimum\":10,\"exclusiveMaximum\":true,\"maximum\":100},\"totalSeconds\":{\"type\":\"integer\",\"description\":\"答题总耗时秒\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"questionType\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"组题类型\"}},\"required\":[\"id\",\"addTime\",\"userName\",\"questionIDs\",\"progressOfAnswer\",\"accuracyRate\",\"totalSeconds\",\"questionType\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"counts\",\"pagesize\",\"pages\",\"page\",\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c949790860ce9003086abae",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c949790860ce9003086abad",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c949790860ce9003086abac",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c949790860ce9003086abab",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c949790860ce9003086abaa",
+            "name": "keyword",
+            "example": "",
+            "desc": "关键字"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553241560,
+        "up_time": 1553242000,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/questions/:id/:check",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 312,
+        "method": "POST",
+        "catid": 89,
+        "title": "试题审核",
+        "path": "/questions/:id/:check",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94949b860ce9003086ab82",
+            "name": "id",
+            "desc": "数据id"
+          },
+          {
+            "_id": "5c94949b860ce9003086ab81",
+            "name": "check",
+            "desc": "1 通过 0 不通过"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94949b860ce9003086ab84",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94949b860ce9003086ab83",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553241020,
+        "up_time": 1553241243,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "6-学科管理",
+    "desc": null,
+    "add_time": 1553072353,
+    "up_time": 1553072897,
+    "list": [
+      {
+        "query_path": {
+          "path": "/subjects",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 333,
+        "method": "GET",
+        "catid": 95,
+        "title": "学科列表",
+        "path": "/subjects",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"counts\":{\"type\":\"integer\",\"description\":\"总记录数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"pagesize\":{\"type\":\"integer\",\"description\":\"页大小\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":5,\"maximum\":50},\"pages\":{\"type\":\"integer\",\"description\":\"总页数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"page\":{\"type\":\"integer\",\"description\":\"当前页码\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"编号\",\"mock\":{\"mock\":\"@id\"}},\"subjectName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"学科名称\"},\"creator\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"创建者\",\"mock\":{\"mock\":\"@cname\"}},\"addDate\":{\"type\":\"string\",\"description\":\"创建日期\",\"mock\":{\"mock\":\"@datetime\"}},\"isFrontDisplay\":{\"type\":\"boolean\",\"description\":\"前台是否显示\",\"mock\":{\"mock\":\"@boolean\"}},\"twoLevelDirectory\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"二级目录\"},\"tags\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"标签\"},\"totals\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":0,\"maximum\":500,\"description\":\"题目数量\"}},\"required\":[\"id\",\"subjectName\",\"creator\",\"addDate\",\"isFrontDisplay\",\"twoLevelDirectory\",\"tags\",\"totals\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"counts\",\"pagesize\",\"pages\",\"page\",\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c949ad9860ce9003086abc9",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c949ad9860ce9003086abc8",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c949ad9860ce9003086abc7",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c949ad9860ce9003086abc6",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c949ad9860ce9003086abc5",
+            "name": "subjectName",
+            "example": "",
+            "desc": "学科名称"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553242581,
+        "up_time": 1553242841,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/subjects/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 1,
+        "tag": [],
+        "_id": 361,
+        "method": "GET",
+        "catid": 95,
+        "title": "学科详情",
+        "path": "/subjects/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"subjectName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"学科名称\"},\"creator\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"创建者\"},\"addDate\":{\"type\":\"integer\",\"minimum\":1537165459,\"maximum\":1537169459,\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"description\":\"创建日期\"},\"isFrontDisplay\":{\"type\":\"boolean\",\"description\":\"前台是否显示\"},\"twoLevelDirectory\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"二级目录\"},\"tags\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"标签\"},\"totals\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":0,\"maximum\":500,\"description\":\"题目数量\"}},\"required\":[\"id\",\"subjectName\",\"creator\",\"addDate\",\"isFrontDisplay\",\"twoLevelDirectory\",\"tags\",\"totals\"]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c949bdf860ce9003086abf3",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c949bdf860ce9003086abf5",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c949bdf860ce9003086abf4",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553243042,
+        "up_time": 1553243103,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/subjects",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 2,
+        "tag": [],
+        "_id": 340,
+        "method": "POST",
+        "catid": 95,
+        "title": "学科添加",
+        "path": "/subjects",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"subjectName\":{\"type\":\"string\",\"description\":\"学科名称\"},\"isFrontDisplay\":{\"type\":\"boolean\",\"description\":\"前台是否显示\"}},\"required\":[]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c949b2b860ce9003086abd3",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c949b2b860ce9003086abd2",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c949b2b860ce9003086abd1",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c949b2b860ce9003086abd0",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c949b2b860ce9003086abcf",
+            "name": "subjectName",
+            "example": "",
+            "desc": "学科名称"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553242845,
+        "up_time": 1553242923,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/subjects/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 3,
+        "tag": [],
+        "_id": 347,
+        "method": "PUT",
+        "catid": 95,
+        "title": "学科修改",
+        "path": "/subjects/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"subjectName\":{\"type\":\"string\",\"description\":\"学科名称\"},\"isFrontDisplay\":{\"type\":\"boolean\",\"description\":\"前台是否显示\"}},\"required\":[]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c949b52860ce9003086abde",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c949b52860ce9003086abdd",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c949b52860ce9003086abdc",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c949b52860ce9003086abdb",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c949b52860ce9003086abda",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c949b52860ce9003086abd9",
+            "name": "subjectName",
+            "example": "",
+            "desc": "学科名称"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553242931,
+        "up_time": 1553242962,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/subjects/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 4,
+        "tag": [],
+        "_id": 354,
+        "method": "DELETE",
+        "catid": 95,
+        "title": "学科删除",
+        "path": "/subjects/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c949b73860ce9003086abe6",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c949b73860ce9003086abeb",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c949b73860ce9003086abea",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c949b73860ce9003086abe9",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c949b73860ce9003086abe8",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c949b73860ce9003086abe7",
+            "name": "subjectName",
+            "example": "",
+            "desc": "学科名称"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553242967,
+        "up_time": 1553242995,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/directorys",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 5,
+        "tag": [],
+        "_id": 368,
+        "method": "GET",
+        "catid": 95,
+        "title": "目录列表",
+        "path": "/directorys",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"counts\":{\"type\":\"integer\",\"description\":\"总记录数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"pagesize\":{\"type\":\"integer\",\"description\":\"页大小\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":5,\"maximum\":50},\"pages\":{\"type\":\"integer\",\"description\":\"总页数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"page\":{\"type\":\"integer\",\"description\":\"当前页码\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"subjectName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"学科名称\"},\"directoryName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"目录名称\"},\"creator\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"创建者\",\"mock\":{\"mock\":\"@cname\"}},\"addDate\":{\"type\":\"string\",\"description\":\"创建日期\",\"mock\":{\"mock\":\"@datetime\"}},\"totals\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":0,\"maximum\":500,\"description\":\"面试题数量\"},\"state\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"状态\"}},\"required\":[\"id\",\"subjectName\",\"directoryName\",\"creator\",\"addDate\",\"totals\",\"state\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"counts\",\"pagesize\",\"pages\",\"page\",\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94ab4e860ce9003086ac4d",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94ab4e860ce9003086ac4c",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c94ab4e860ce9003086ac4b",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c94ab4e860ce9003086ac4a",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c94ab4e860ce9003086ac49",
+            "name": "subjectID",
+            "example": "",
+            "desc": "学科ID"
+          },
+          {
+            "required": "0",
+            "_id": "5c94ab4e860ce9003086ac48",
+            "name": "directoryName",
+            "example": "",
+            "desc": "目录名称"
+          },
+          {
+            "required": "0",
+            "_id": "5c94ab4e860ce9003086ac47",
+            "name": "state",
+            "example": "",
+            "desc": "状态 1 开启 0 屏蔽"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553244191,
+        "up_time": 1553247054,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/directorys/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 6,
+        "tag": [],
+        "_id": 375,
+        "method": "GET",
+        "catid": 95,
+        "title": "目录详情",
+        "path": "/directorys/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"subjectName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"学科名称\"},\"directoryName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"目录名称\"},\"creator\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"创建者\"},\"addDate\":{\"type\":\"integer\",\"minimum\":1537165459,\"maximum\":1537169459,\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"description\":\"创建日期\"},\"totals\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":0,\"maximum\":500,\"description\":\"面试题数量\"},\"state\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"状态\"}},\"required\":[\"id\",\"subjectName\",\"directoryName\",\"creator\",\"addDate\",\"totals\",\"state\"]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94a0c8860ce9003086ac15",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94a0c8860ce9003086ac14",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94a0c8860ce9003086ac13",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553244318,
+        "up_time": 1553244360,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/directorys",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 7,
+        "tag": [],
+        "_id": 382,
+        "method": "POST",
+        "catid": 95,
+        "title": "目录添加",
+        "path": "/directorys",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"subjectID\":{\"type\":\"string\",\"description\":\"学科ID\"},\"directoryName\":{\"type\":\"string\",\"description\":\"目录名称\"}},\"required\":[\"subjectID\",\"directoryName\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94a119860ce9003086ac1d",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94a119860ce9003086ac1c",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553244363,
+        "up_time": 1553244441,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/directorys/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 8,
+        "tag": [],
+        "_id": 389,
+        "method": "PUT",
+        "catid": 95,
+        "title": "目录修改",
+        "path": "/directorys/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"subjectID\":{\"type\":\"string\",\"description\":\"学科ID\"},\"directoryName\":{\"type\":\"string\",\"description\":\"目录名称\"}},\"required\":[\"subjectID\",\"directoryName\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94a133860ce9003086ac22",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94a133860ce9003086ac21",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94a133860ce9003086ac20",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553244443,
+        "up_time": 1553244467,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/directorys/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 9,
+        "tag": [],
+        "_id": 396,
+        "method": "DELETE",
+        "catid": 95,
+        "title": "目录删除",
+        "path": "/directorys/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94a156860ce9003086ac27",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94a156860ce9003086ac29",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94a156860ce9003086ac28",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553244475,
+        "up_time": 1553244502,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/directorys/:id/:state",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 10,
+        "tag": [],
+        "_id": 403,
+        "method": "POST",
+        "catid": 95,
+        "title": "目录状态",
+        "path": "/directorys/:id/:state",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94a188860ce9003086ac2f",
+            "name": "id",
+            "desc": "数据id"
+          },
+          {
+            "_id": "5c94a188860ce9003086ac2e",
+            "name": "state",
+            "desc": "状态 1 启用 0 屏蔽"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94a188860ce9003086ac31",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94a188860ce9003086ac30",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553244512,
+        "up_time": 1553244552,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/tags",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 11,
+        "tag": [],
+        "_id": 410,
+        "method": "GET",
+        "catid": 95,
+        "title": "标签列表",
+        "path": "/tags",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"counts\":{\"type\":\"integer\",\"description\":\"总记录数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"pagesize\":{\"type\":\"integer\",\"description\":\"页大小\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":5,\"maximum\":50},\"pages\":{\"type\":\"integer\",\"description\":\"总页数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"page\":{\"type\":\"integer\",\"description\":\"当前页码\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"subjectName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"学科名称\"},\"tagName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"标签名称\"},\"creator\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"创建者\",\"mock\":{\"mock\":\"@cname\"}},\"addDate\":{\"type\":\"string\",\"description\":\"创建日期\",\"mock\":{\"mock\":\"@datetime\"}},\"totals\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":0,\"maximum\":500,\"description\":\"面试题数量\"},\"state\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"状态\"}},\"required\":[\"id\",\"subjectName\",\"tagName\",\"creator\",\"addDate\",\"totals\",\"state\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"counts\",\"pagesize\",\"pages\",\"page\",\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94ab41860ce9003086ac46",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94ab41860ce9003086ac45",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c94ab41860ce9003086ac44",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c94ab41860ce9003086ac43",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c94ab41860ce9003086ac42",
+            "name": "subjectID",
+            "example": "",
+            "desc": "学科ID"
+          },
+          {
+            "required": "0",
+            "_id": "5c94ab41860ce9003086ac41",
+            "name": "tagName",
+            "example": "",
+            "desc": "标签名称"
+          },
+          {
+            "required": "0",
+            "_id": "5c94ab41860ce9003086ac40",
+            "name": "state",
+            "example": "",
+            "desc": "状态 1 开启 0 屏蔽"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553246579,
+        "up_time": 1553247041,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/tags/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 12,
+        "tag": [],
+        "_id": 417,
+        "method": "GET",
+        "catid": 95,
+        "title": "标签详情",
+        "path": "/tags/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"subjectName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"学科名称\"},\"tagName\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"标签名称\"},\"creator\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"创建者\"},\"addDate\":{\"type\":\"integer\",\"minimum\":1537165459,\"maximum\":1537169459,\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"description\":\"创建日期\"},\"totals\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":0,\"maximum\":500,\"description\":\"面试题数量\"},\"state\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"状态\"}},\"required\":[\"id\",\"subjectName\",\"tagName\",\"creator\",\"addDate\",\"totals\",\"state\"]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94ab96860ce9003086ac52",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94ab96860ce9003086ac54",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94ab96860ce9003086ac53",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553247063,
+        "up_time": 1553247126,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/tags",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 13,
+        "tag": [],
+        "_id": 424,
+        "method": "POST",
+        "catid": 95,
+        "title": "标签添加",
+        "path": "/tags",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"subjectID\":{\"type\":\"string\",\"description\":\"学科ID\"},\"tagName\":{\"type\":\"string\",\"description\":\"标签名称\"}},\"required\":[\"subjectID\",\"tagName\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94abcb860ce9003086ac58",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94abcb860ce9003086ac57",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553247133,
+        "up_time": 1553247179,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/tags/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 14,
+        "tag": [],
+        "_id": 431,
+        "method": "PUT",
+        "catid": 95,
+        "title": "标签修改",
+        "path": "/tags/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"subjectID\":{\"type\":\"string\",\"description\":\"学科ID\"},\"tagName\":{\"type\":\"string\",\"description\":\"标签名称\"}},\"required\":[\"subjectID\",\"tagName\"]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94ac1b860ce9003086ac60",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94ac1b860ce9003086ac5f",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94ac1b860ce9003086ac5e",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553247200,
+        "up_time": 1553247259,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/tags/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 15,
+        "tag": [],
+        "_id": 438,
+        "method": "DELETE",
+        "catid": 95,
+        "title": "标签删除",
+        "path": "/tags/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94ac3e860ce9003086ac65",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94ac3e860ce9003086ac67",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94ac3e860ce9003086ac66",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553247261,
+        "up_time": 1553247294,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/tags/:id/:state",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 16,
+        "tag": [],
+        "_id": 445,
+        "method": "POST",
+        "catid": 95,
+        "title": "标签状态",
+        "path": "/tags/:id/:state",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94ac77860ce9003086ac6e",
+            "name": "id",
+            "desc": "数据id"
+          },
+          {
+            "_id": "5c94ac77860ce9003086ac6d",
+            "name": "state",
+            "desc": "状态 1 启用 0 屏蔽"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94ac77860ce9003086ac70",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94ac77860ce9003086ac6f",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553247306,
+        "up_time": 1553247351,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "7-面试技巧",
+    "desc": null,
+    "add_time": 1553072361,
+    "up_time": 1553072909,
+    "list": [
+      {
+        "query_path": {
+          "path": "/articles",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 452,
+        "method": "GET",
+        "catid": 101,
+        "title": "文章列表",
+        "path": "/articles",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"oldPassword\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"oldPassword\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"counts\":{\"type\":\"integer\",\"description\":\"总记录数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":100,\"maximum\":5000},\"pagesize\":{\"type\":\"integer\",\"description\":\"页大小\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":5,\"maximum\":50},\"pages\":{\"type\":\"integer\",\"description\":\"总页数\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"page\":{\"type\":\"integer\",\"description\":\"当前页码\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":1,\"maximum\":100},\"items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"title\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"标题\",\"mock\":{\"mock\":\"@ctitle\"}},\"articleBody\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"文章正文\",\"mock\":{\"mock\":\"@cparagraph\"}},\"videoURL\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"视频地址\"},\"reads\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":0,\"maximum\":500,\"description\":\"阅读数\"},\"state\":{\"type\":\"boolean\",\"description\":\"状态\",\"mock\":{\"mock\":\"@boolean\"}},\"creator\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"录入人\",\"mock\":{\"mock\":\"@cname\"}}},\"required\":[\"id\",\"title\",\"articleBody\",\"videoURL\",\"reads\",\"state\",\"creator\"]},\"minItems\":10,\"maxItems\":20,\"uniqueItems\":true,\"description\":\"列表\"}},\"required\":[\"counts\",\"pagesize\",\"pages\",\"page\",\"items\"]}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94afc9860ce9003086ac81",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94afc9860ce9003086ac80",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c94afc9860ce9003086ac7f",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c94afc9860ce9003086ac7e",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c94afc9860ce9003086ac7d",
+            "name": "keyword",
+            "example": "",
+            "desc": "关键字"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553248065,
+        "up_time": 1553248201,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/articles/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 473,
+        "method": "DELETE",
+        "catid": 101,
+        "title": "文章删除",
+        "path": "/articles/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94b037860ce9003086ac9e",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94b037860ce9003086aca3",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94b037860ce9003086aca2",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c94b037860ce9003086aca1",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c94b037860ce9003086aca0",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c94b037860ce9003086ac9f",
+            "name": "keyword",
+            "example": "",
+            "desc": "关键字"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553248292,
+        "up_time": 1553248311,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/articles",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 459,
+        "method": "POST",
+        "catid": 101,
+        "title": "文章添加",
+        "path": "/articles",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"title\":{\"type\":\"string\",\"description\":\"标题\"},\"articleBody\":{\"type\":\"string\",\"description\":\"文章正文\"},\"videoURL\":{\"type\":\"string\",\"description\":\"视频地址\"}},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94b003860ce9003086ac8b",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94b003860ce9003086ac8a",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c94b003860ce9003086ac89",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c94b003860ce9003086ac88",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c94b003860ce9003086ac87",
+            "name": "keyword",
+            "example": "",
+            "desc": "关键字"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553248208,
+        "up_time": 1553248259,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/articles/:id/:state",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 487,
+        "method": "POST",
+        "catid": 101,
+        "title": "文章状态",
+        "path": "/articles/:id/:state",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94b0a5860ce9003086acb9",
+            "name": "id",
+            "desc": "数据id"
+          },
+          {
+            "_id": "5c94b0a5860ce9003086acb8",
+            "name": "state",
+            "desc": "状态 1 开启 0 屏蔽"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94b0a5860ce9003086acbe",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94b0a5860ce9003086acbd",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c94b0a5860ce9003086acbc",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c94b0a5860ce9003086acbb",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c94b0a5860ce9003086acba",
+            "name": "keyword",
+            "example": "",
+            "desc": "关键字"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553248388,
+        "up_time": 1553248421,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/articles/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 466,
+        "method": "PUT",
+        "catid": 101,
+        "title": "文章编辑",
+        "path": "/articles/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"title\":{\"type\":\"string\",\"description\":\"标题\"},\"articleBody\":{\"type\":\"string\",\"description\":\"文章正文\"},\"videoURL\":{\"type\":\"string\",\"description\":\"视频地址\"}},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94b020860ce9003086ac96",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94b020860ce9003086ac95",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94b020860ce9003086ac94",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5c94b020860ce9003086ac93",
+            "name": "page",
+            "example": "1",
+            "desc": "当前页数"
+          },
+          {
+            "required": "0",
+            "_id": "5c94b020860ce9003086ac92",
+            "name": "pagesize",
+            "example": "10",
+            "desc": "页尺寸"
+          },
+          {
+            "required": "0",
+            "_id": "5c94b020860ce9003086ac91",
+            "name": "keyword",
+            "example": "",
+            "desc": "关键字"
+          }
+        ],
+        "uid": 11,
+        "add_time": 1553248262,
+        "up_time": 1553248288,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/articles/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 480,
+        "method": "GET",
+        "catid": 101,
+        "title": "文章详情",
+        "path": "/articles/:id",
+        "project_id": 20,
+        "res_body_type": "json",
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{},\"required\":[]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":9000001,\"maximum\":9010000,\"description\":\"编号\"},\"title\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"标题\",\"mock\":{\"mock\":\"@ctitle\"}},\"articleBody\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"文章正文\",\"mock\":{\"mock\":\"@cparagraph\"}},\"videoURL\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"视频地址\"},\"reads\":{\"type\":\"integer\",\"exclusiveMinimum\":true,\"exclusiveMaximum\":true,\"minimum\":0,\"maximum\":500,\"description\":\"阅读数\"},\"state\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"状态\"},\"creator\":{\"type\":\"string\",\"format\":\"ctitle\",\"description\":\"录入人\"}},\"required\":[\"id\",\"title\",\"articleBody\",\"videoURL\",\"reads\",\"state\",\"creator\"]}",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "5c94b06c860ce9003086acae",
+            "name": "id",
+            "desc": "数据id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5c94b06c860ce9003086acb0",
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "required": "1",
+            "_id": "5c94b06c860ce9003086acaf",
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUzNTY4NjY0NSwiZXhwIjoxNTM2ODk2MjQ1fQ.bGV4qjcZcNYDBJjihIsSbSEQyPa5SkVcUYuA0WfgDds",
+            "example": "",
+            "desc": "令牌"
+          }
+        ],
+        "req_query": [],
+        "uid": 11,
+        "add_time": 1553248315,
+        "up_time": 1553248364,
+        "__v": 0
+      }
+    ]
+  }
+]
